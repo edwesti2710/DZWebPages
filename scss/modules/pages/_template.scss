@@ -1,0 +1,25 @@
+.template {
+    // background-color: red;
+    margin: 20px 0;
+
+    &__aditionalData {
+        text-align: center;
+        font-family: $font3;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color5;
+    }
+
+    &__viewer {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        iframe {
+            width: 90vw;
+            height: 90vh;
+            box-shadow: 5px 5px 20px #000;
+        }
+    }
+}

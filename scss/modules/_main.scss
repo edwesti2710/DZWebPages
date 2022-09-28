@@ -1,0 +1,96 @@
+.main {
+    // background-color: red;
+    margin: 20px 0;
+
+    &__aditionalData {
+        text-align: center;
+        font-family: $font3;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color5;
+    }
+
+    &__templates {
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &__item {
+            z-index: 0;
+            background-color: $color4;
+            width: 360px;
+            box-shadow: 1px 1px 10px #0008;
+            margin: 10px 0;
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+            
+            &:hover {
+                .main__templates__item__buttons {
+                    display: inline-block;
+                }
+
+                .main__templates__item__imgContainer {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            
+            &__imgContainer {
+                height: 200px;
+                overflow: hidden;
+                
+                img {
+                    transition: transform .5s;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__data {
+                // background-color: red;
+                padding: 5px 10px;
+
+                h4 {
+                    font-size: 2.4rem;
+                    font-family: $font2;
+                    font-weight: 500;
+                    color: $color2;
+                }
+
+                h5 {
+                    font-size: 1.5rem;
+                    font-family: $font3;
+                    font-weight: 100;
+                    color: $color0;
+                    height: 80px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+            &__buttons {
+                position: absolute;
+                top: 0;
+                display: none;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba($color4, $alpha: .5);
+                backdrop-filter: blur(5px);
+                text-align: center;
+                color: $color0;
+                font-size: 1.6rem;
+                font-family: $font1;
+                font-weight: 500;
+            }
+        }
+    }
+}
